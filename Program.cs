@@ -1,8 +1,27 @@
-﻿Console.WriteLine("Informe sua idade:");
-int age = int.Parse(Console.ReadLine());
-if ( age >= 18){
-    Console.WriteLine("Você é maior de idade, está apto(a) a dirigir e votar");
-}
-else{
-    Console.WriteLine("Você não é maior de idade, logo não está apto(a) a dirigir e votar");
+﻿using System;
+
+class Program
+{
+
+    static float CalcularMedia(float nota1, float nota2, float nota3)
+    {
+        float media = (nota1 + nota2 + nota3) / 3;
+        return media;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.Write("Digite a primeira nota: ");
+        float nota1 = float.Parse(Console.ReadLine());
+
+        Console.Write("Digite a segunda nota: ");
+        float nota2 = float.Parse(Console.ReadLine());
+
+        Console.Write("Digite a terceira nota: ");
+        float nota3 = float.Parse(Console.ReadLine());
+
+        float media = CalcularMedia(nota1, nota2, nota3);
+
+        Console.WriteLine($"A média das notas é: {media}");
+    }
 }

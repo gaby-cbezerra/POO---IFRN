@@ -1,4 +1,8 @@
-﻿for (int i = 1; i < 11; i++) 
-{
-  Console.WriteLine(i);
+﻿Console.WriteLine("Informe sua idade:");
+int age = int.Parse(Console.ReadLine());
+if ( age >= 18){
+    Console.WriteLine("Você é maior de idade, está apto(a) a dirigir e votar");
+}
+else{
+    Console.WriteLine("Você não é maior de idade, logo não está apto(a) a dirigir e votar");
 }

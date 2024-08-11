@@ -1,6 +1,12 @@
-﻿Console.WriteLine("Digite seu nome:");
-string name = Console.ReadLine();
-Console.WriteLine("Digite sua idade:");
-int age = int.Parse(Console.ReadLine());
+﻿Console.WriteLine("Digite um número:");
+int number = int.Parse(Console.ReadLine());
 
-Console.WriteLine($"Olá, {name}, você tem {age} anos.");
+if (number > 0){
+    Console.WriteLine($"{number} é positivo");
+}
+else if( number < 0){
+    Console.WriteLine($"{number} é negativo");
+}
+else{
+    Console.WriteLine($"{number} é zero");
+}

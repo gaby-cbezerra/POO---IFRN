@@ -1,12 +1,6 @@
-﻿int a = int.Parse(Console.ReadLine());
-int b = int.Parse(Console.ReadLine());
+﻿Console.WriteLine("Digite seu nome:");
+string name = Console.ReadLine();
+Console.WriteLine("Digite sua idade:");
+int age = int.Parse(Console.ReadLine());
 
-int soma = a + b;
-int sub = a - b;
-int multi = a * b;
-int div = a / b;
-
-Console.WriteLine($"Soma = {soma}");
-Console.WriteLine($"Subtração = {sub}");
-Console.WriteLine($"Multiplicação= {multi}");
-Console.WriteLine($"Divisão = {div}");
+Console.WriteLine($"Olá, {name}, você tem {age} anos.");

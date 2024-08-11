@@ -1,9 +1,12 @@
-﻿int number1 = 19;
-float number2 = 9.5f;
-string word = "Olá";
-bool number3 = true;
+﻿int a = int.Parse(Console.ReadLine());
+int b = int.Parse(Console.ReadLine());
 
-Console.WriteLine(number1);
-Console.WriteLine(number2);
-Console.WriteLine(word);
-Console.WriteLine(number3);
+int soma = a + b;
+int sub = a - b;
+int multi = a * b;
+int div = a / b;
+
+Console.WriteLine($"Soma = {soma}");
+Console.WriteLine($"Subtração = {sub}");
+Console.WriteLine($"Multiplicação= {multi}");
+Console.WriteLine($"Divisão = {div}");

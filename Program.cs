@@ -1,13 +1,8 @@
-﻿int soma = 0;
-int number;
-do {
-    Console.WriteLine("Digite um número:");
-    number = int.Parse(Console.ReadLine());
-    
-    if ( number != 0){
-    soma += number;
-    }
+﻿Console.WriteLine("Informe um valor em R$ para conversão em dólar:");
+float money = float.Parse(Console.ReadLine());
+Console.WriteLine("Informe a taxa de câmbio:");
+float taxa = float.Parse(Console.ReadLine());
 
-}  while( number != 0);
+float dol = money * taxa;
 
-Console.WriteLine($"A soma de todos os números digitados é: {soma}");
+Console.WriteLine($"O valor é {dol}$");

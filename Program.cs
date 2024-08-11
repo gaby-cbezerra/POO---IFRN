@@ -1,27 +1,39 @@
-﻿using System;
+﻿        Console.Write("Digite o primeiro número: ");
+        int num1 = int.Parse(Console.ReadLine());
+        Console.Write("Digite o segundo número: ");
+        int num2 = int.Parse(Console.ReadLine());
 
-class Program
-{
+        Console.Write("Digite o terceiro número: ");
+        int num3 = int.Parse(Console.ReadLine());
 
-    static float CalcularMedia(float nota1, float nota2, float nota3)
-    {
-        float media = (nota1 + nota2 + nota3) / 3;
-        return media;
-    }
+        int maior;
+        if (num1 >= num2 && num1 >= num3)
+        {
+            maior = num1;
+        }
+        else if (num2 >= num1 && num2 >= num3)
+        {
+            maior = num2;
+        }
+        else
+        {
+            maior = num3;
+        }
 
-    static void Main(string[] args)
-    {
-        Console.Write("Digite a primeira nota: ");
-        float nota1 = float.Parse(Console.ReadLine());
+        int menor;
+        if (num1 <= num2 && num1 <= num3)
+        {
+            menor = num1;
+        }
+        else if (num2 <= num1 && num2 <= num3)
+        {
+            menor = num2;
+        }
+        else
+        {
+            menor = num3;
+        }
 
-        Console.Write("Digite a segunda nota: ");
-        float nota2 = float.Parse(Console.ReadLine());
-
-        Console.Write("Digite a terceira nota: ");
-        float nota3 = float.Parse(Console.ReadLine());
-
-        float media = CalcularMedia(nota1, nota2, nota3);
-
-        Console.WriteLine($"A média das notas é: {media}");
-    }
-}
+        Console.WriteLine($"O maior número é: {maior}");
+        Console.WriteLine($"O menor número é: {menor}");
+    

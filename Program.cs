@@ -4,25 +4,26 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("Digite um número:");
-        int number;
+        List<string> names = new List<string>();
 
-        if (!int.TryParse(Console.ReadLine(), out number) || number <= 0)
+        Console.WriteLine("Digite os nomes (digite 'fim' para terminar):");
+
+        while (true)
         {
-            Console.WriteLine("Por favor, insira um número inteiro positivo.");
-            return; 
+            string input = Console.ReadLine();
+            if (input.ToLower() == "fim")
+            {
+                break;
+            }
+            names.Add(input);
         }
 
-        int a = 0, b = 1;
+        names.Sort();
 
-        Console.WriteLine("Sequência de Fibonacci até " + number + ":");
-        while (a <= number)
+        Console.WriteLine("\nLista de nomes ordenada em ordem alfabética:");
+        foreach (string name in names)
         {
-            Console.Write(a + " ");
-
-            int temp = a;
-            a = b;
-            b = temp + b;
+            Console.WriteLine(name);
         }
     }
 }

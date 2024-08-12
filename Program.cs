@@ -2,38 +2,27 @@
 
 class Program
 {
-    
-    static int CalcularFatorial(int n)
+    static void Main()
     {
-        if (n < 0)
+        Console.WriteLine("Digite um número:");
+        int number;
+
+        if (!int.TryParse(Console.ReadLine(), out number) || number <= 0)
         {
-            throw new ArgumentException("O número deve ser não-negativo.");
+            Console.WriteLine("Por favor, insira um número inteiro positivo.");
+            return; 
         }
 
-        if (n == 0 || n == 1)
+        int a = 0, b = 1;
+
+        Console.WriteLine("Sequência de Fibonacci até " + number + ":");
+        while (a <= number)
         {
-            return 1;
-        }
-        else
-        {
-            return n * CalcularFatorial(n - 1);
+            Console.Write(a + " ");
+
+            int temp = a;
+            a = b;
+            b = temp + b;
         }
     }
-
-    static void Main(string[] args)
-    {
-        try
-        {
-            Console.WriteLine("Fatorial de 4: " + CalcularFatorial(4));  
-            Console.WriteLine("Fatorial de 0: " + CalcularFatorial(0));  
-            Console.WriteLine("Fatorial de 5: " + CalcularFatorial(5));  
-            Console.WriteLine("Fatorial de -3: " + CalcularFatorial(-3)); 
-        }
-         catch (ArgumentException e)
-        {
-            Console.WriteLine(e.Message);
-        }
 }
-}
-
-    
